@@ -90,7 +90,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Corbel", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Chocolate;
+            label1.ForeColor = Color.NavajoWhite;
             label1.Location = new Point(307, 40);
             label1.Name = "label1";
             label1.Size = new Size(234, 33);
