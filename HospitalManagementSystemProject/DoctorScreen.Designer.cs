@@ -31,17 +31,16 @@
             groupBox3 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox2 = new GroupBox();
-            button1 = new Button();
             richTextBox1 = new RichTextBox();
+            button1 = new Button();
             groupBox1 = new GroupBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             groupBox4 = new GroupBox();
-            button2 = new Button();
-            button3 = new Button();
             button4 = new Button();
+            button2 = new Button();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
@@ -80,6 +79,14 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Randevu Detay";
             // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(6, 22);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(480, 242);
+            richTextBox1.TabIndex = 17;
+            richTextBox1.Text = "";
+            // 
             // button1
             // 
             button1.BackColor = Color.Thistle;
@@ -91,14 +98,6 @@
             button1.TabIndex = 18;
             button1.Text = "Bilgileri Düzenle";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(6, 22);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(480, 242);
-            richTextBox1.TabIndex = 17;
-            richTextBox1.Text = "";
             // 
             // groupBox1
             // 
@@ -160,7 +159,6 @@
             // groupBox4
             // 
             groupBox4.Controls.Add(button4);
-            groupBox4.Controls.Add(button3);
             groupBox4.Controls.Add(button2);
             groupBox4.Controls.Add(button1);
             groupBox4.Location = new Point(12, 485);
@@ -170,41 +168,29 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Hızlı Erişim";
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Thistle;
-            button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(280, 35);
-            button2.Name = "button2";
-            button2.Size = new Size(206, 47);
-            button2.TabIndex = 19;
-            button2.Text = "Duyurular";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Thistle;
-            button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(16, 102);
-            button3.Name = "button3";
-            button3.Size = new Size(224, 47);
-            button3.TabIndex = 20;
-            button3.Text = "Güncelle";
-            button3.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             button4.BackColor = Color.Thistle;
             button4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(280, 102);
+            button4.Location = new Point(16, 102);
             button4.Name = "button4";
-            button4.Size = new Size(206, 47);
+            button4.Size = new Size(456, 47);
             button4.TabIndex = 21;
             button4.Text = "Çıkış Yap";
             button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Thistle;
+            button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Location = new Point(266, 35);
+            button2.Name = "button2";
+            button2.Size = new Size(206, 47);
+            button2.TabIndex = 19;
+            button2.Text = "Duyurular";
+            button2.UseVisualStyleBackColor = false;
             // 
             // DoctorScreen
             // 
@@ -242,7 +228,6 @@
         private Label label1;
         private GroupBox groupBox4;
         private Button button4;
-        private Button button3;
         private Button button2;
     }
 }
