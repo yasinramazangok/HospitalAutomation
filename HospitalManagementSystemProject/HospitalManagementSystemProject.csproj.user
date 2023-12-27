@@ -13,6 +13,9 @@
     <Compile Update="DoctorScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MeetingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PatientEditInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PatientScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SecretaryBranchEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SecretaryDoctorEdit.cs">
