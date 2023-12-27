@@ -52,9 +52,10 @@
             button1.Location = new Point(333, 448);
             button1.Name = "button1";
             button1.Size = new Size(171, 47);
-            button1.TabIndex = 12;
+            button1.TabIndex = 7;
             button1.Text = "Kaydet";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -62,7 +63,7 @@
             textBox1.Location = new Point(262, 104);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(312, 34);
-            textBox1.TabIndex = 11;
+            textBox1.TabIndex = 1;
             // 
             // maskedTextBox1
             // 
@@ -71,7 +72,7 @@
             maskedTextBox1.Mask = "00000000000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(312, 35);
-            maskedTextBox1.TabIndex = 10;
+            maskedTextBox1.TabIndex = 3;
             // 
             // label3
             // 
@@ -150,7 +151,7 @@
             textBox2.Location = new Point(262, 159);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(312, 34);
-            textBox2.TabIndex = 18;
+            textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
@@ -158,7 +159,7 @@
             textBox3.Location = new Point(262, 383);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(312, 34);
-            textBox3.TabIndex = 19;
+            textBox3.TabIndex = 6;
             textBox3.UseSystemPasswordChar = true;
             // 
             // maskedTextBox2
@@ -168,7 +169,7 @@
             maskedTextBox2.Mask = "(999) 000-0000";
             maskedTextBox2.Name = "maskedTextBox2";
             maskedTextBox2.Size = new Size(312, 35);
-            maskedTextBox2.TabIndex = 20;
+            maskedTextBox2.TabIndex = 4;
             // 
             // comboBox1
             // 
@@ -178,10 +179,11 @@
             comboBox1.Location = new Point(262, 326);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(312, 36);
-            comboBox1.TabIndex = 21;
+            comboBox1.TabIndex = 5;
             // 
             // PatientRegistration
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;

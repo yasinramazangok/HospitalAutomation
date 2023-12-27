@@ -16,5 +16,11 @@ namespace HospitalManagementSystemProject
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PatientRegistration patientRegistration = new PatientRegistration();
+            patientRegistration.Show();
+        }
     }
 }

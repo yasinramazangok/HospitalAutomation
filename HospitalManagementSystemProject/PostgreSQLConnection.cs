@@ -17,5 +17,5 @@ namespace HospitalManagementSystemProject
             connection.Open();
             return connection;
         }
-    } 
+    }
 }

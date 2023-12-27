@@ -50,6 +50,7 @@
             button1.Size = new Size(306, 198);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -60,6 +61,7 @@
             button2.Size = new Size(306, 198);
             button2.TabIndex = 1;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -70,6 +72,7 @@
             button3.Size = new Size(306, 198);
             button3.TabIndex = 2;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
@@ -139,10 +142,11 @@
             label5.TabIndex = 8;
             label5.Text = "Giriş yapmak için kullanıcı seçiniz";
             // 
-            // Form1
+            // SystemLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(1505, 869);
             Controls.Add(label5);
@@ -155,7 +159,9 @@
             Controls.Add(button2);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Name = "Form1";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "SystemLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hastane Yönetim Sistemi V1.0";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

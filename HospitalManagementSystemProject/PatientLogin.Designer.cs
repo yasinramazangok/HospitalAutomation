@@ -108,6 +108,7 @@
             linkLabel1.TabIndex = 6;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Üye Ol";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // PatientLogin
             // 
