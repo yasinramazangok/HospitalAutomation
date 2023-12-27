@@ -22,6 +22,9 @@
     <Compile Update="PatientScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SecretaryDoctorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SecretaryLogin.cs">
       <SubType>Form</SubType>
     </Compile>
