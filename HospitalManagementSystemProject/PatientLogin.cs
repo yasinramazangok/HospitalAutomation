@@ -35,6 +35,7 @@ namespace HospitalManagementSystemProject
             if(dataReader.Read())
             {
                 PatientScreen patientScreen = new PatientScreen();
+                patientScreen.TCIdentityNumber = maskedTextBox1.Text;
                 patientScreen.Show();
                 this.Hide();
             }

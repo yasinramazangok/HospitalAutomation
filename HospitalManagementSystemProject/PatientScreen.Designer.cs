@@ -269,6 +269,7 @@
             Name = "PatientScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hasta İşlemleri";
+            Load += PatientScreen_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
