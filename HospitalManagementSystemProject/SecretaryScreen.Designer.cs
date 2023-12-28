@@ -402,6 +402,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(3, 19);
@@ -446,6 +447,7 @@
             Name = "SecretaryScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sekreter İşlemleri";
+            Load += SecretaryScreen_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

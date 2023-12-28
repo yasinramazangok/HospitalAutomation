@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace HospitalManagementSystemProject
         public SecretaryScreen()
         {
             InitializeComponent();
+        }
+
+        public string secretaryTC;
+
+        PostgreSQLConnection connection = new PostgreSQLConnection();
+
+        private void SecretaryScreen_Load(object sender, EventArgs e)
+        {
+            label3.Text = secretaryTC;
+
+            NpgsqlCommand command = new NpgsqlCommand("select * from secretary where secretarytc = '" + secretaryTC + "'", connection.Connection());
+            NpgsqlDataReader dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                label4.Text = dataReader[1].ToString();
+            }
+            connection.Connection().Close();
+
+
+            DataTable dataTable = new DataTable();
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from branch", connection.Connection());
+            dataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
         }
     }
 }
