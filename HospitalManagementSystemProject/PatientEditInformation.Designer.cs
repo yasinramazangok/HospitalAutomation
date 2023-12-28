@@ -70,7 +70,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(312, 34);
             textBox3.TabIndex = 6;
-            textBox3.UseSystemPasswordChar = true;
             // 
             // textBox2
             // 
@@ -131,6 +130,7 @@
             button1.TabIndex = 27;
             button1.Text = "Güncelle";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
