@@ -13,7 +13,7 @@ namespace HospitalManagementSystemProject
     {
         public NpgsqlConnection Connection()
         {
-            NpgsqlConnection connection = new NpgsqlConnection(@"server=localHost; port=5432; Database=HospitalManagementSystem; user Id=Postgres; password=12345");
+            NpgsqlConnection connection = new NpgsqlConnection(@"server=localhost; port=5432; Database=HospitalManagementSystem; user Id=postgres; password=000000");
             connection.Open();
             return connection;
         }
