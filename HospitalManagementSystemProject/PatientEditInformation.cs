@@ -16,5 +16,12 @@ namespace HospitalManagementSystemProject
         {
             InitializeComponent();
         }
+
+        public string patienttc;
+
+        private void PatientEditInformation_Load(object sender, EventArgs e)
+        {
+            maskedTextBox1.Text = patienttc;
+        }
     }
 }

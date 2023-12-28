@@ -61,7 +61,7 @@
             // 
             maskedTextBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             maskedTextBox1.Location = new Point(307, 135);
-            maskedTextBox1.Mask = "00000000000";
+            maskedTextBox1.Mask = "000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(312, 35);
             maskedTextBox1.TabIndex = 10;

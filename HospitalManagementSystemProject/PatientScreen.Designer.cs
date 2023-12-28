@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox1 = new GroupBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            textBox1 = new TextBox();
+            label8 = new Label();
             linkLabel1 = new LinkLabel();
             button1 = new Button();
             richTextBox1 = new RichTextBox();
@@ -46,6 +49,7 @@
             dataGridView1 = new DataGridView();
             groupBox4 = new GroupBox();
             dataGridView2 = new DataGridView();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -113,6 +117,8 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(textBox1);
+            groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(linkLabel1);
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(richTextBox1);
@@ -128,6 +134,25 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Randevu İşlemleri";
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(129, 25);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(320, 35);
+            textBox1.TabIndex = 21;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Corbel", 15.75F);
+            label8.ForeColor = SystemColors.ActiveCaptionText;
+            label8.Location = new Point(85, 28);
+            label8.Name = "label8";
+            label8.Size = new Size(38, 26);
+            label8.TabIndex = 20;
+            label8.Text = "Id :";
+            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
@@ -140,6 +165,7 @@
             linkLabel1.TabIndex = 19;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Bilgileri Düzenle";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // button1
             // 
@@ -165,21 +191,21 @@
             // 
             comboBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Opr. Dr. Yasin Ramazan GÖK", "Prof. Dr. Enes BALCI", "Doç. Dr. Mehmet Ali GÖK", "Opr. Dr. Emine GÖÇER", "Prof. Dr. Yusuf SAĞLAM", "Prof. Dr. Ahmet Asım TRABZON", "Doç. Dr. Hakan ÇAM" });
             comboBox2.Location = new Point(129, 132);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(320, 38);
             comboBox2.TabIndex = 16;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox1
             // 
             comboBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Genel Cerrahi\t\t", "Kulak Burun Boğaz", "Üroloji", "Dermatoloji", "Plastik Ve Rekonstrüktif Cerrahi", "Fizik Tedavi Ve Rehabilitasyon", "Psikiyatri", "Kardiyovasküler Cerrahi ", "Ortopedi", "Beyin Ve Sinir Cerrahisi", "Göz Hastalıkları", "Dahiliye" });
             comboBox1.Location = new Point(129, 77);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(320, 38);
             comboBox1.TabIndex = 15;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label7
             // 
@@ -255,6 +281,11 @@
             dataGridView2.Size = new Size(529, 235);
             dataGridView2.TabIndex = 1;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
             // PatientScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -301,5 +332,8 @@
         private DataGridView dataGridView1;
         private GroupBox groupBox4;
         private DataGridView dataGridView2;
+        private TextBox textBox1;
+        private Label label8;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }

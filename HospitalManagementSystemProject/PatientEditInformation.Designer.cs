@@ -52,7 +52,7 @@
             comboBox1.Location = new Point(226, 341);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(312, 36);
-            comboBox1.TabIndex = 35;
+            comboBox1.TabIndex = 5;
             // 
             // maskedTextBox2
             // 
@@ -61,7 +61,7 @@
             maskedTextBox2.Mask = "(999) 000-0000";
             maskedTextBox2.Name = "maskedTextBox2";
             maskedTextBox2.Size = new Size(312, 35);
-            maskedTextBox2.TabIndex = 34;
+            maskedTextBox2.TabIndex = 4;
             // 
             // textBox3
             // 
@@ -69,7 +69,7 @@
             textBox3.Location = new Point(226, 398);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(312, 34);
-            textBox3.TabIndex = 33;
+            textBox3.TabIndex = 6;
             textBox3.UseSystemPasswordChar = true;
             // 
             // textBox2
@@ -78,7 +78,7 @@
             textBox2.Location = new Point(226, 174);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(312, 34);
-            textBox2.TabIndex = 32;
+            textBox2.TabIndex = 2;
             // 
             // label7
             // 
@@ -138,16 +138,16 @@
             textBox1.Location = new Point(226, 119);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(312, 34);
-            textBox1.TabIndex = 26;
+            textBox1.TabIndex = 1;
             // 
             // maskedTextBox1
             // 
             maskedTextBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             maskedTextBox1.Location = new Point(226, 229);
-            maskedTextBox1.Mask = "00000000000";
+            maskedTextBox1.Mask = "00";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(312, 35);
-            maskedTextBox1.TabIndex = 25;
+            maskedTextBox1.TabIndex = 3;
             // 
             // label3
             // 
@@ -182,6 +182,7 @@
             // 
             // PatientEditInformation
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
@@ -204,6 +205,7 @@
             Name = "PatientEditInformation";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hasta Bilgi Güncelleme";
+            Load += PatientEditInformation_Load;
             ResumeLayout(false);
             PerformLayout();
         }

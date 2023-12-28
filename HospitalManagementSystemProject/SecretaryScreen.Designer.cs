@@ -34,28 +34,28 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            richTextBox1 = new RichTextBox();
             button1 = new Button();
+            richTextBox1 = new RichTextBox();
             groupBox4 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
             button4 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             groupBox3 = new GroupBox();
-            comboBox1 = new ComboBox();
-            label6 = new Label();
-            label7 = new Label();
-            comboBox2 = new ComboBox();
-            label5 = new Label();
-            button5 = new Button();
-            button6 = new Button();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            checkBox1 = new CheckBox();
-            maskedTextBox1 = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            maskedTextBox3 = new MaskedTextBox();
             textBox1 = new TextBox();
+            maskedTextBox3 = new MaskedTextBox();
+            maskedTextBox2 = new MaskedTextBox();
+            maskedTextBox1 = new MaskedTextBox();
+            checkBox1 = new CheckBox();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            button6 = new Button();
+            comboBox2 = new ComboBox();
+            button5 = new Button();
+            comboBox1 = new ComboBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             groupBox5 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox6 = new GroupBox();
@@ -138,14 +138,6 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Duyuru Oluştur";
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(6, 22);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(349, 182);
-            richTextBox1.TabIndex = 17;
-            richTextBox1.Text = "";
-            // 
             // button1
             // 
             button1.BackColor = Color.Thistle;
@@ -157,6 +149,14 @@
             button1.TabIndex = 19;
             button1.Text = "Oluştur";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(6, 22);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(349, 182);
+            richTextBox1.TabIndex = 17;
+            richTextBox1.Text = "";
             // 
             // groupBox4
             // 
@@ -170,17 +170,17 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Hızlı Erişim";
             // 
-            // button3
+            // button4
             // 
-            button3.BackColor = Color.Thistle;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(108, 46);
-            button3.Name = "button3";
-            button3.Size = new Size(194, 47);
-            button3.TabIndex = 18;
-            button3.Text = "Doktor Paneli";
-            button3.UseVisualStyleBackColor = false;
+            button4.BackColor = Color.Thistle;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = SystemColors.ActiveCaptionText;
+            button4.Location = new Point(598, 46);
+            button4.Name = "button4";
+            button4.Size = new Size(190, 47);
+            button4.TabIndex = 20;
+            button4.Text = "Randevu Liste";
+            button4.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -194,17 +194,17 @@
             button2.Text = "Branş Paneli";
             button2.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button3
             // 
-            button4.BackColor = Color.Thistle;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(598, 46);
-            button4.Name = "button4";
-            button4.Size = new Size(190, 47);
-            button4.TabIndex = 20;
-            button4.Text = "Randevu Liste";
-            button4.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.Thistle;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = SystemColors.ActiveCaptionText;
+            button3.Location = new Point(108, 46);
+            button3.Name = "button3";
+            button3.Size = new Size(194, 47);
+            button3.TabIndex = 18;
+            button3.Text = "Doktor Paneli";
+            button3.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
@@ -230,70 +230,86 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Randevu İşlemleri";
             // 
-            // comboBox1
+            // textBox1
             // 
-            comboBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Genel Cerrahi\t\t", "Kulak Burun Boğaz", "Üroloji", "Dermatoloji", "Plastik Ve Rekonstrüktif Cerrahi", "Fizik Tedavi Ve Rehabilitasyon", "Psikiyatri", "Kardiyovasküler Cerrahi ", "Ortopedi", "Beyin Ve Sinir Cerrahisi", "Göz Hastalıkları", "Dahiliye" });
-            comboBox1.Location = new Point(203, 240);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(264, 38);
-            comboBox1.TabIndex = 15;
+            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(206, 90);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(261, 35);
+            textBox1.TabIndex = 27;
             // 
-            // label6
+            // maskedTextBox3
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Corbel", 15.75F);
-            label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(128, 145);
-            label6.Name = "label6";
-            label6.Size = new Size(69, 26);
-            label6.TabIndex = 13;
-            label6.Text = "Tarih : ";
+            maskedTextBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maskedTextBox3.Location = new Point(203, 190);
+            maskedTextBox3.Mask = "00:00";
+            maskedTextBox3.Name = "maskedTextBox3";
+            maskedTextBox3.Size = new Size(264, 35);
+            maskedTextBox3.TabIndex = 26;
+            maskedTextBox3.ValidatingType = typeof(DateTime);
             // 
-            // label7
+            // maskedTextBox2
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Corbel", 15.75F);
-            label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(132, 196);
-            label7.Name = "label7";
-            label7.Size = new Size(65, 26);
-            label7.TabIndex = 14;
-            label7.Text = "Saat : ";
+            maskedTextBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maskedTextBox2.Location = new Point(203, 140);
+            maskedTextBox2.Mask = "00/00/0000";
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new Size(264, 35);
+            maskedTextBox2.TabIndex = 25;
+            maskedTextBox2.ValidatingType = typeof(DateTime);
             // 
-            // comboBox2
+            // maskedTextBox1
             // 
-            comboBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Opr. Dr. Yasin Ramazan GÖK", "Prof. Dr. Enes BALCI", "Doç. Dr. Mehmet Ali GÖK", "Opr. Dr. Emine GÖÇER", "Prof. Dr. Yusuf SAĞLAM", "Prof. Dr. Ahmet Asım TRABZON", "Doç. Dr. Hakan ÇAM" });
-            comboBox2.Location = new Point(203, 293);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(264, 38);
-            comboBox2.TabIndex = 16;
+            maskedTextBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maskedTextBox1.Location = new Point(203, 40);
+            maskedTextBox1.Mask = "00";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(264, 35);
+            maskedTextBox1.TabIndex = 24;
             // 
-            // label5
+            // checkBox1
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Corbel", 15.75F);
-            label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(159, 94);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 26);
-            label5.TabIndex = 12;
-            label5.Text = "Id :";
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox1.Location = new Point(203, 344);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(100, 29);
+            checkBox1.TabIndex = 23;
+            checkBox1.Text = "Durumu";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // label10
             // 
-            button5.BackColor = Color.DodgerBlue;
-            button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = SystemColors.ActiveCaptionText;
-            button5.Location = new Point(206, 396);
-            button5.Name = "button5";
-            button5.Size = new Size(134, 47);
-            button5.TabIndex = 18;
-            button5.Text = "Kaydet";
-            button5.UseVisualStyleBackColor = false;
+            label10.AutoSize = true;
+            label10.Font = new Font("Corbel", 15.75F);
+            label10.ForeColor = SystemColors.ActiveCaptionText;
+            label10.Location = new Point(6, 43);
+            label10.Name = "label10";
+            label10.Size = new Size(191, 26);
+            label10.TabIndex = 22;
+            label10.Text = "TC Kimlik Numarası :";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Corbel", 15.75F);
+            label9.ForeColor = SystemColors.ActiveCaptionText;
+            label9.Location = new Point(115, 298);
+            label9.Name = "label9";
+            label9.Size = new Size(82, 26);
+            label9.TabIndex = 21;
+            label9.Text = "Doktor :";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Corbel", 15.75F);
+            label8.ForeColor = SystemColors.ActiveCaptionText;
+            label8.Location = new Point(127, 247);
+            label8.Name = "label8";
+            label8.Size = new Size(70, 26);
+            label8.TabIndex = 20;
+            label8.Text = "Branş :";
             // 
             // button6
             // 
@@ -307,86 +323,70 @@
             button6.Text = "Güncelle";
             button6.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // comboBox2
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Corbel", 15.75F);
-            label8.ForeColor = SystemColors.ActiveCaptionText;
-            label8.Location = new Point(127, 247);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 26);
-            label8.TabIndex = 20;
-            label8.Text = "Branş :";
+            comboBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Opr. Dr. Yasin Ramazan GÖK", "Prof. Dr. Enes BALCI", "Doç. Dr. Mehmet Ali GÖK", "Opr. Dr. Emine GÖÇER", "Prof. Dr. Yusuf SAĞLAM", "Prof. Dr. Ahmet Asım TRABZON", "Doç. Dr. Hakan ÇAM" });
+            comboBox2.Location = new Point(203, 293);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(264, 38);
+            comboBox2.TabIndex = 16;
             // 
-            // label9
+            // button5
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Corbel", 15.75F);
-            label9.ForeColor = SystemColors.ActiveCaptionText;
-            label9.Location = new Point(115, 298);
-            label9.Name = "label9";
-            label9.Size = new Size(82, 26);
-            label9.TabIndex = 21;
-            label9.Text = "Doktor :";
+            button5.BackColor = Color.DodgerBlue;
+            button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = SystemColors.ActiveCaptionText;
+            button5.Location = new Point(206, 396);
+            button5.Name = "button5";
+            button5.Size = new Size(134, 47);
+            button5.TabIndex = 18;
+            button5.Text = "Kaydet";
+            button5.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // comboBox1
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Corbel", 15.75F);
-            label10.ForeColor = SystemColors.ActiveCaptionText;
-            label10.Location = new Point(6, 43);
-            label10.Name = "label10";
-            label10.Size = new Size(191, 26);
-            label10.TabIndex = 22;
-            label10.Text = "TC Kimlik Numarası :";
+            comboBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Genel Cerrahi\t\t", "Kulak Burun Boğaz", "Üroloji", "Dermatoloji", "Plastik Ve Rekonstrüktif Cerrahi", "Fizik Tedavi Ve Rehabilitasyon", "Psikiyatri", "Kardiyovasküler Cerrahi ", "Ortopedi", "Beyin Ve Sinir Cerrahisi", "Göz Hastalıkları", "Dahiliye" });
+            comboBox1.Location = new Point(203, 240);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(264, 38);
+            comboBox1.TabIndex = 15;
             // 
-            // checkBox1
+            // label7
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(203, 344);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(100, 29);
-            checkBox1.TabIndex = 23;
-            checkBox1.Text = "Durumu";
-            checkBox1.UseVisualStyleBackColor = true;
+            label7.AutoSize = true;
+            label7.Font = new Font("Corbel", 15.75F);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(132, 196);
+            label7.Name = "label7";
+            label7.Size = new Size(65, 26);
+            label7.TabIndex = 14;
+            label7.Text = "Saat : ";
             // 
-            // maskedTextBox1
+            // label6
             // 
-            maskedTextBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            maskedTextBox1.Location = new Point(203, 40);
-            maskedTextBox1.Mask = "00000000000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(264, 35);
-            maskedTextBox1.TabIndex = 24;
+            label6.AutoSize = true;
+            label6.Font = new Font("Corbel", 15.75F);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(128, 145);
+            label6.Name = "label6";
+            label6.Size = new Size(69, 26);
+            label6.TabIndex = 13;
+            label6.Text = "Tarih : ";
             // 
-            // maskedTextBox2
+            // label5
             // 
-            maskedTextBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            maskedTextBox2.Location = new Point(203, 140);
-            maskedTextBox2.Mask = "00/00/0000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(264, 35);
-            maskedTextBox2.TabIndex = 25;
-            maskedTextBox2.ValidatingType = typeof(DateTime);
-            // 
-            // maskedTextBox3
-            // 
-            maskedTextBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            maskedTextBox3.Location = new Point(203, 190);
-            maskedTextBox3.Mask = "00:00";
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(264, 35);
-            maskedTextBox3.TabIndex = 26;
-            maskedTextBox3.ValidatingType = typeof(DateTime);
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(206, 90);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 35);
-            textBox1.TabIndex = 27;
+            label5.AutoSize = true;
+            label5.Font = new Font("Corbel", 15.75F);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(159, 94);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 26);
+            label5.TabIndex = 12;
+            label5.Text = "Id :";
             // 
             // groupBox5
             // 

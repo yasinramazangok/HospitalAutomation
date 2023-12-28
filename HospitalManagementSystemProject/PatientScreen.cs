@@ -36,9 +36,9 @@ namespace HospitalManagementSystemProject
             }
             connection.Connection().Close();
 
-           
-            DataTable dataTable = new DataTable(); 
-            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from meeting where meetingpatienttc::integer = " + TCIdentityNumber, connection.Connection()); 
+
+            DataTable dataTable = new DataTable();
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from meeting where meetingpatienttc::bigint = " + TCIdentityNumber, connection.Connection());
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
 
@@ -49,7 +49,37 @@ namespace HospitalManagementSystemProject
             {
                 comboBox1.Items.Add(dataReader2[0]);
             }
-            connection.Connection().Close();    
+            connection.Connection().Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+
+            NpgsqlCommand command3 = new NpgsqlCommand("select doctorname, doctorsurname from doctor where doctorbranch = @p1 ", connection.Connection());
+            command3.Parameters.AddWithValue("@p1", comboBox1.Text);
+            NpgsqlDataReader dataReader3 = command3.ExecuteReader();
+            while (dataReader3.Read())
+            {
+                comboBox2.Items.Add(dataReader3[0] + " " + dataReader3[1]);
+            }
+            connection.Connection().Close();
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dataTable2 = new DataTable();
+            NpgsqlDataAdapter dataAdapter2 = new NpgsqlDataAdapter("select * from meeting where meetingbranch = '" + comboBox1.Text + "'", connection.Connection());
+            dataAdapter2.Fill(dataTable2);
+            dataGridView2.DataSource = dataTable2;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PatientEditInformation patientEditInformation = new PatientEditInformation();
+            patientEditInformation.patienttc = TCIdentityNumber;
+            patientEditInformation.Show();
         }
     }
 }
