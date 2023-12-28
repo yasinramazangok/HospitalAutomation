@@ -327,7 +327,6 @@
             // 
             comboBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Opr. Dr. Yasin Ramazan GÖK", "Prof. Dr. Enes BALCI", "Doç. Dr. Mehmet Ali GÖK", "Opr. Dr. Emine GÖÇER", "Prof. Dr. Yusuf SAĞLAM", "Prof. Dr. Ahmet Asım TRABZON", "Doç. Dr. Hakan ÇAM" });
             comboBox2.Location = new Point(203, 293);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(264, 38);
@@ -344,16 +343,17 @@
             button5.TabIndex = 18;
             button5.Text = "Kaydet";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // comboBox1
             // 
             comboBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Genel Cerrahi\t\t", "Kulak Burun Boğaz", "Üroloji", "Dermatoloji", "Plastik Ve Rekonstrüktif Cerrahi", "Fizik Tedavi Ve Rehabilitasyon", "Psikiyatri", "Kardiyovasküler Cerrahi ", "Ortopedi", "Beyin Ve Sinir Cerrahisi", "Göz Hastalıkları", "Dahiliye" });
             comboBox1.Location = new Point(203, 240);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(264, 38);
             comboBox1.TabIndex = 15;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label7
             // 
@@ -424,6 +424,7 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(3, 19);
