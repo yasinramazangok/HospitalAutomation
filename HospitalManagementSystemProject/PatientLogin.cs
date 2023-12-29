@@ -13,6 +13,7 @@ namespace HospitalManagementSystemProject
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // Patient registration screen showing
             PatientRegistration patientRegistration = new PatientRegistration();
             patientRegistration.Show();
         }

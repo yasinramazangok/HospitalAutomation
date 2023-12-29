@@ -13,6 +13,7 @@ namespace HospitalManagementSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Adding new patient to database 
             NpgsqlCommand command = new NpgsqlCommand("insert into patient (patientname, patientsurname, patienttc, patientphonenumber,patientpassword, patientgender) values (@p1, @p2, @p3, @p4, @p5, @p6)", connection.Connection());
             command.Parameters.AddWithValue("@p1", textBox1.Text);
             command.Parameters.AddWithValue("@p2", textBox2.Text);
@@ -23,6 +24,7 @@ namespace HospitalManagementSystemProject
             command.ExecuteNonQuery();
             connection.Connection().Close();
             MessageBox.Show("Kaydınız yapılmıştır! Şifreniz : " + textBox3.Text, "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close(); // Patient registration screen closing when clicked the message box ok button
         }
     }
 }

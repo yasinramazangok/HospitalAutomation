@@ -24,6 +24,7 @@ namespace HospitalManagementSystemProject
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Select cell and send data to form components
             int selected = dataGridView1.SelectedCells[0].RowIndex;
             textBox1.Text = dataGridView1.Rows[selected].Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.Rows[selected].Cells[1].Value.ToString();
@@ -31,6 +32,7 @@ namespace HospitalManagementSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Add branch
             NpgsqlCommand command1 = new NpgsqlCommand("insert into branch (branchname) values (@p1)", connection.Connection());
             command1.Parameters.AddWithValue("@p1", textBox2.Text);
             command1.ExecuteNonQuery();
@@ -41,6 +43,7 @@ namespace HospitalManagementSystemProject
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Delete branch
             NpgsqlCommand command2 = new NpgsqlCommand("delete from branch where branchid = @p1", connection.Connection());
             command2.Parameters.AddWithValue("@p1", int.Parse(textBox1.Text));
             command2.ExecuteNonQuery();
@@ -51,6 +54,7 @@ namespace HospitalManagementSystemProject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Update branch
             NpgsqlCommand command3 = new NpgsqlCommand("update branch set branchname = @p1 where branchid ='" + textBox1.Text + "'", connection.Connection());
             command3.Parameters.AddWithValue("@p1", textBox2.Text);
             command3.ExecuteNonQuery();

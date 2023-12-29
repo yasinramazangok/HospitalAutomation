@@ -24,7 +24,7 @@ namespace HospitalManagementSystemProject
             dataGridView1.DataSource = dataTable;
             connection.Connection().Close();
 
-
+            // Adding to branch from database to comboBox1
             NpgsqlCommand command = new NpgsqlCommand("select branchname from branch", connection.Connection());
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
@@ -37,6 +37,7 @@ namespace HospitalManagementSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Adding new doctor
             NpgsqlCommand command1 = new NpgsqlCommand("insert into doctor (doctorname, doctorsurname, doctorbranch, doctortc, doctorpassword, doctortitle) values (@p1, @p2, @p3, @p4, @p5, @p6)", connection.Connection());
             command1.Parameters.AddWithValue("@p1", textBox1.Text);
             command1.Parameters.AddWithValue("@p2", textBox2.Text);
@@ -52,6 +53,7 @@ namespace HospitalManagementSystemProject
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Select cell and send data to form components
             int selected = dataGridView1.SelectedCells[0].RowIndex;
             textBox1.Text = dataGridView1.Rows[selected].Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.Rows[selected].Cells[1].Value.ToString();
@@ -63,6 +65,7 @@ namespace HospitalManagementSystemProject
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Delete doctor
             NpgsqlCommand command2 = new NpgsqlCommand("delete from doctor where doctortc = @p1", connection.Connection());
             command2.Parameters.AddWithValue("@p1", maskedTextBox1.Text);
             command2.ExecuteNonQuery();
@@ -73,6 +76,7 @@ namespace HospitalManagementSystemProject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Update doctor
             NpgsqlCommand command3 = new NpgsqlCommand("update doctor set doctorname = @p1, doctorsurname = @p2, doctorbranch = @p3, doctortc = @p4, doctorpassword = @p5, doctortitle = @p6 where doctortc ='" + maskedTextBox1.Text + "'", connection.Connection());
             command3.Parameters.AddWithValue("@p1", textBox1.Text);
             command3.Parameters.AddWithValue("@p2", textBox2.Text);

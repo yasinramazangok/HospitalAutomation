@@ -12,12 +12,13 @@ namespace HospitalManagementSystemProject
 
         PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
-        public string secretaryScreenTCIdentityNumber; // Secretary screen parameter
+        public string? secretaryScreenTCIdentityNumber; // Secretary screen parameter
        
         private void SecretaryScreen_Load(object sender, EventArgs e)
         {
             label3.Text = secretaryScreenTCIdentityNumber;
 
+            // Pulling data from database to groupBox1
             NpgsqlCommand command = new NpgsqlCommand("select * from secretary where secretarytc = '" + secretaryScreenTCIdentityNumber + "'", connection.Connection());
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
@@ -44,7 +45,7 @@ namespace HospitalManagementSystemProject
             dataGridView2.DataSource = dataTable2;
             connection.Connection().Close();
 
-
+            // Adding branches to comboBox1
             NpgsqlCommand command2 = new NpgsqlCommand("select branchname from branch", connection.Connection());
             NpgsqlDataReader dataReader2 = command2.ExecuteReader();
             while (dataReader2.Read())
@@ -58,6 +59,7 @@ namespace HospitalManagementSystemProject
         {
             comboBox2.Items.Clear();
 
+            // Pulling data from database to comboBox2
             NpgsqlCommand command3 = new NpgsqlCommand("select (doctorname || ' ' || doctorsurname) from doctor where doctorbranch = @p1", connection.Connection());
             command3.Parameters.AddWithValue("@p1", comboBox1.Text);
             NpgsqlDataReader dataReader3 = command3.ExecuteReader();
@@ -71,6 +73,7 @@ namespace HospitalManagementSystemProject
 
         private void button5_Click(object sender, EventArgs e)
         {
+            // Adding new meeting 
             NpgsqlCommand command4 = new NpgsqlCommand("insert into meeting (meetingdate, meetingtime, meetingbranch, meetingdoctor, meetingstate, meetingpatienttc) values (@p1, @p2, @p3, @p4, @p5, @p6)", connection.Connection());
             command4.Parameters.AddWithValue("@p1", maskedTextBox2.Text);
             command4.Parameters.AddWithValue("@p2", maskedTextBox3.Text);
@@ -85,6 +88,7 @@ namespace HospitalManagementSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Adding new announcement
             NpgsqlCommand command5 = new NpgsqlCommand("insert into announcement (announcementtext) values (@p1)", connection.Connection());
             command5.Parameters.AddWithValue("@p1", richTextBox1.Text);
             command5.ExecuteNonQuery();
@@ -94,24 +98,28 @@ namespace HospitalManagementSystemProject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Redirect to secretary doctor edit screen
             SecretaryDoctorEdit secretaryDoctorEdit = new SecretaryDoctorEdit();
             secretaryDoctorEdit.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Redirect to secretary branch edit screen
             SecretaryBranchEdit secretaryBranchEdit = new SecretaryBranchEdit();
             secretaryBranchEdit.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            // Redirect to meeting list screen
             MeetingList meetingList = new MeetingList();
             meetingList.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            // Redirect to announcement screen
             Announcements announcements = new Announcements();
             announcements.Show();
         }

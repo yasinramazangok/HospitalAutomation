@@ -54,7 +54,6 @@ namespace HospitalManagementSystemProject
         private void button2_Click(object sender, EventArgs e)
         {
             // Redirect to announcements screen from button2
-
             Announcements announcements = new Announcements();
             announcements.Show();
         }
@@ -62,7 +61,6 @@ namespace HospitalManagementSystemProject
         private void button4_Click(object sender, EventArgs e)
         {
             // Hospital Management System exit
-
             Application.Exit();
         }
     }

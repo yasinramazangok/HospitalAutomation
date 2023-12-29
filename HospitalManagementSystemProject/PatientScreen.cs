@@ -12,13 +12,13 @@ namespace HospitalManagementSystemProject
 
         PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
-        public string patientScreenTCIdentityNumber; // Patient screen parameter
+        public string? patientScreenTCIdentityNumber; // Patient screen parameter
 
         private void PatientScreen_Load(object sender, EventArgs e)
         {
             label3.Text = patientScreenTCIdentityNumber;
 
-            // Pulling data from database to form components
+            // Pulling data from database to groupBox1
             NpgsqlCommand command = new NpgsqlCommand("select patientname, patientsurname from patient where patienttc = @p1", connection.Connection());
             command.Parameters.AddWithValue("@p1", patientScreenTCIdentityNumber);
             NpgsqlDataReader dataReader = command.ExecuteReader();
@@ -62,7 +62,7 @@ namespace HospitalManagementSystemProject
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Pulling data from database to form components
+            // Pulling data from database to dataGridView2
             DataTable dataTable2 = new DataTable();
             NpgsqlDataAdapter dataAdapter2 = new NpgsqlDataAdapter("select * from meeting where meetingbranch = '" + comboBox1.Text + "'", connection.Connection());
             dataAdapter2.Fill(dataTable2);
@@ -71,6 +71,7 @@ namespace HospitalManagementSystemProject
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // Redirect to patient edit information screen from linkLabel
             PatientEditInformation patientEditInformation = new PatientEditInformation();
             patientEditInformation.patientEditInformationTCIdentityNumber = patientScreenTCIdentityNumber;
             patientEditInformation.Show();
