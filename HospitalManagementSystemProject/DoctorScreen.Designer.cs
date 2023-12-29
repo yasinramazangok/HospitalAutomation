@@ -55,7 +55,7 @@
             groupBox3.ForeColor = SystemColors.ControlText;
             groupBox3.Location = new Point(519, 12);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(535, 642);
+            groupBox3.Size = new Size(746, 642);
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             groupBox3.Text = "Randevu Listesi";
@@ -66,7 +66,7 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(3, 19);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(529, 620);
+            dataGridView1.Size = new Size(740, 620);
             dataGridView1.TabIndex = 0;
             // 
             // groupBox2
@@ -180,6 +180,7 @@
             button4.TabIndex = 21;
             button4.Text = "Çıkış Yap";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
@@ -199,7 +200,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(1057, 654);
+            ClientSize = new Size(1267, 654);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);

@@ -44,7 +44,7 @@
             button1.Location = new Point(378, 288);
             button1.Name = "button1";
             button1.Size = new Size(171, 47);
-            button1.TabIndex = 12;
+            button1.TabIndex = 3;
             button1.Text = "Giriş Yap";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -55,7 +55,7 @@
             textBox1.Location = new Point(307, 219);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(312, 34);
-            textBox1.TabIndex = 11;
+            textBox1.TabIndex = 2;
             textBox1.UseSystemPasswordChar = true;
             // 
             // maskedTextBox1
@@ -65,7 +65,7 @@
             maskedTextBox1.Mask = "000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(312, 35);
-            maskedTextBox1.TabIndex = 10;
+            maskedTextBox1.TabIndex = 1;
             // 
             // label3
             // 

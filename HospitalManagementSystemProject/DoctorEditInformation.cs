@@ -18,16 +18,23 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        public string TCIdentityNumber;
+        public string? doctorTCIdentityNumber; // Doctor edit information screen parameter
+        /* 
+            C# 8.0'dan önce, tüm referans tipler (örneğin, string, object, class türleri) otomatik olarak nullable idi. 
+            Yani, herhangi bir referans tipin değeri null olabilir. 
+            Ancak, bu durum bazen null reference hatalarına yol açabiliyordu. 
+            C# 8.0 ile birlikte, nullable reference type özelliği getirilerek, referans tiplerin null olup olmadığını açıkça belirtme imkanı sağlandı.
+            Bu yüzden burada değişken nullable olarak tanımlanmıştır.
+        */
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
         private void DoctorEditInformation_Load(object sender, EventArgs e)
         {
-            maskedTextBox1.Text = TCIdentityNumber;
+            maskedTextBox1.Text = doctorTCIdentityNumber; 
 
-
-            NpgsqlCommand command = new NpgsqlCommand("select * from doctor where doctortc = '" + TCIdentityNumber + "'", connection.Connection());
+            // Pulling data from database to form components
+            NpgsqlCommand command = new NpgsqlCommand("select * from doctor where doctortc = '" + doctorTCIdentityNumber + "'", connection.Connection());
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
