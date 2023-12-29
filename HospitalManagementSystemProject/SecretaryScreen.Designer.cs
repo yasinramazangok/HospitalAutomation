@@ -49,7 +49,6 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            button6 = new Button();
             comboBox2 = new ComboBox();
             button5 = new Button();
             comboBox1 = new ComboBox();
@@ -60,6 +59,7 @@
             dataGridView1 = new DataGridView();
             groupBox6 = new GroupBox();
             dataGridView2 = new DataGridView();
+            button6 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -161,6 +161,7 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(button6);
             groupBox4.Controls.Add(button4);
             groupBox4.Controls.Add(button2);
             groupBox4.Controls.Add(button3);
@@ -176,7 +177,7 @@
             button4.BackColor = Color.Thistle;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ActiveCaptionText;
-            button4.Location = new Point(598, 46);
+            button4.Location = new Point(462, 46);
             button4.Name = "button4";
             button4.Size = new Size(190, 47);
             button4.TabIndex = 20;
@@ -189,7 +190,7 @@
             button2.BackColor = Color.Thistle;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ActiveCaptionText;
-            button2.Location = new Point(354, 46);
+            button2.Location = new Point(243, 46);
             button2.Name = "button2";
             button2.Size = new Size(192, 47);
             button2.TabIndex = 19;
@@ -202,7 +203,7 @@
             button3.BackColor = Color.Thistle;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(108, 46);
+            button3.Location = new Point(16, 46);
             button3.Name = "button3";
             button3.Size = new Size(194, 47);
             button3.TabIndex = 18;
@@ -220,7 +221,6 @@
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(button6);
             groupBox3.Controls.Add(comboBox2);
             groupBox3.Controls.Add(button5);
             groupBox3.Controls.Add(comboBox1);
@@ -315,18 +315,6 @@
             label8.TabIndex = 20;
             label8.Text = "Branş :";
             // 
-            // button6
-            // 
-            button6.BackColor = Color.DodgerBlue;
-            button6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = SystemColors.ActiveCaptionText;
-            button6.Location = new Point(346, 396);
-            button6.Name = "button6";
-            button6.Size = new Size(121, 47);
-            button6.TabIndex = 19;
-            button6.Text = "Güncelle";
-            button6.UseVisualStyleBackColor = false;
-            // 
             // comboBox2
             // 
             comboBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -341,9 +329,9 @@
             button5.BackColor = Color.DodgerBlue;
             button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = SystemColors.ActiveCaptionText;
-            button5.Location = new Point(206, 396);
+            button5.Location = new Point(242, 389);
             button5.Name = "button5";
-            button5.Size = new Size(134, 47);
+            button5.Size = new Size(191, 47);
             button5.TabIndex = 18;
             button5.Text = "Kaydet";
             button5.UseVisualStyleBackColor = false;
@@ -436,6 +424,19 @@
             dataGridView2.Size = new Size(536, 326);
             dataGridView2.TabIndex = 0;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.Thistle;
+            button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = SystemColors.ActiveCaptionText;
+            button6.Location = new Point(672, 46);
+            button6.Name = "button6";
+            button6.Size = new Size(190, 47);
+            button6.TabIndex = 21;
+            button6.Text = "Duyurular";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // SecretaryScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -481,7 +482,6 @@
         private Button button2;
         private Button button3;
         private GroupBox groupBox3;
-        private Button button6;
         private Button button5;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
@@ -500,5 +500,6 @@
         private DataGridView dataGridView1;
         private GroupBox groupBox6;
         private DataGridView dataGridView2;
+        private Button button6;
     }
 }

@@ -117,5 +117,11 @@ namespace HospitalManagementSystemProject
             MeetingList meetingList = new MeetingList();
             meetingList.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Announcements announcements = new Announcements();
+            announcements.Show();
+        }
     }
 }
