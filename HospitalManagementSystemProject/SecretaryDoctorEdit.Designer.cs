@@ -175,6 +175,7 @@
             button2.TabIndex = 8;
             button2.Text = "Sil";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -187,6 +188,7 @@
             button3.TabIndex = 9;
             button3.Text = "Güncelle";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // dataGridView1
             // 
