@@ -40,6 +40,8 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            textBox4 = new TextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // comboBox1
@@ -58,7 +60,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(312, 34);
             textBox3.TabIndex = 47;
-            textBox3.UseSystemPasswordChar = true;
             // 
             // textBox2
             // 
@@ -72,7 +73,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(152, 327);
+            label6.Location = new Point(161, 327);
             label6.Name = "label6";
             label6.Size = new Size(79, 33);
             label6.TabIndex = 44;
@@ -82,7 +83,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(141, 271);
+            label5.Location = new Point(150, 271);
             label5.Name = "label5";
             label5.Size = new Size(90, 33);
             label5.TabIndex = 43;
@@ -92,7 +93,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(57, 215);
+            label4.Location = new Point(72, 215);
             label4.Name = "label4";
             label4.Size = new Size(174, 33);
             label4.TabIndex = 42;
@@ -103,7 +104,7 @@
             button1.BackColor = Color.FromArgb(255, 128, 0);
             button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(331, 399);
+            button1.Location = new Point(331, 452);
             button1.Name = "button1";
             button1.Size = new Size(171, 47);
             button1.TabIndex = 41;
@@ -122,7 +123,7 @@
             // 
             maskedTextBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             maskedTextBox1.Location = new Point(254, 213);
-            maskedTextBox1.Mask = "00";
+            maskedTextBox1.Mask = "000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(312, 35);
             maskedTextBox1.TabIndex = 39;
@@ -131,7 +132,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(130, 159);
+            label3.Location = new Point(145, 159);
             label3.Name = "label3";
             label3.Size = new Size(101, 33);
             label3.TabIndex = 38;
@@ -141,7 +142,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(168, 103);
+            label2.Location = new Point(183, 103);
             label2.Name = "label2";
             label2.Size = new Size(63, 33);
             label2.TabIndex = 37;
@@ -158,12 +159,32 @@
             label1.TabIndex = 36;
             label1.Text = "Güncelleme İşlemleri";
             // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(254, 390);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(312, 34);
+            textBox4.TabIndex = 51;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Corbel", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(140, 389);
+            label7.Name = "label7";
+            label7.Size = new Size(98, 33);
+            label7.TabIndex = 50;
+            label7.Text = "Ünvan :";
+            // 
             // DoctorEditInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSalmon;
-            ClientSize = new Size(800, 478);
+            ClientSize = new Size(800, 538);
+            Controls.Add(textBox4);
+            Controls.Add(label7);
             Controls.Add(comboBox1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -180,6 +201,7 @@
             Name = "DoctorEditInformation";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Doktor Bilgi Güncelleme";
+            Load += DoctorEditInformation_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,5 +220,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private TextBox textBox4;
+        private Label label7;
     }
 }

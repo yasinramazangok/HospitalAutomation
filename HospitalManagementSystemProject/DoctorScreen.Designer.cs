@@ -98,6 +98,7 @@
             button1.TabIndex = 18;
             button1.Text = "Bilgileri Düzenle";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // groupBox1
             // 
@@ -191,6 +192,7 @@
             button2.TabIndex = 19;
             button2.Text = "Duyurular";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // DoctorScreen
             // 
@@ -206,6 +208,7 @@
             Name = "DoctorScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Doktor İşlemleri";
+            Load += DoctorScreen_Load;
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox2.ResumeLayout(false);

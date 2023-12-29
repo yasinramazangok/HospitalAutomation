@@ -136,6 +136,7 @@
             // 
             // textBox1
             // 
+            textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(129, 25);
             textBox1.Name = "textBox1";

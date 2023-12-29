@@ -38,7 +38,7 @@ namespace HospitalManagementSystemProject
 
 
             DataTable dataTable = new DataTable();
-            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from meeting where meetingpatienttc::bigint = " + TCIdentityNumber, connection.Connection());
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from meeting where meetingpatienttc::character varying = " + TCIdentityNumber, connection.Connection());
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
 
