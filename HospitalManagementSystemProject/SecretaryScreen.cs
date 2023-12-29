@@ -111,5 +111,11 @@ namespace HospitalManagementSystemProject
             SecretaryBranchEdit secretaryBranchEdit = new SecretaryBranchEdit();
             secretaryBranchEdit.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MeetingList meetingList = new MeetingList();
+            meetingList.Show();
+        }
     }
 }

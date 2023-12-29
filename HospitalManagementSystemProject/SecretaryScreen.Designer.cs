@@ -182,6 +182,7 @@
             button4.TabIndex = 20;
             button4.Text = "Randevu Liste";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button2
             // 

@@ -42,11 +42,13 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(486, 85);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(375, 228);
             dataGridView1.TabIndex = 79;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // button3
             // 
@@ -56,9 +58,10 @@
             button3.Location = new Point(154, 266);
             button3.Name = "button3";
             button3.Size = new Size(312, 47);
-            button3.TabIndex = 78;
+            button3.TabIndex = 5;
             button3.Text = "Güncelle";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -68,9 +71,10 @@
             button2.Location = new Point(316, 202);
             button2.Name = "button2";
             button2.Size = new Size(150, 47);
-            button2.TabIndex = 77;
+            button2.TabIndex = 4;
             button2.Text = "Sil";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox2
             // 
@@ -78,7 +82,7 @@
             textBox2.Location = new Point(154, 140);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(312, 34);
-            textBox2.TabIndex = 74;
+            textBox2.TabIndex = 2;
             // 
             // button1
             // 
@@ -88,9 +92,10 @@
             button1.Location = new Point(154, 202);
             button1.Name = "button1";
             button1.Size = new Size(146, 47);
-            button1.TabIndex = 70;
+            button1.TabIndex = 3;
             button1.Text = "Ekle";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -98,7 +103,7 @@
             textBox1.Location = new Point(154, 85);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(312, 34);
-            textBox1.TabIndex = 69;
+            textBox1.TabIndex = 1;
             // 
             // label3
             // 
@@ -133,6 +138,7 @@
             // 
             // SecretaryBranchEdit
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkKhaki;
@@ -150,6 +156,7 @@
             Name = "SecretaryBranchEdit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Branş Düzenle";
+            Load += SecretaryBranchEdit_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
