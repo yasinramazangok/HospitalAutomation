@@ -149,6 +149,7 @@
             button1.TabIndex = 19;
             button1.Text = "Oluştur";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // richTextBox1
             // 
@@ -193,6 +194,7 @@
             button2.TabIndex = 19;
             button2.Text = "Branş Paneli";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -205,6 +207,7 @@
             button3.TabIndex = 18;
             button3.Text = "Doktor Paneli";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // groupBox3
             // 

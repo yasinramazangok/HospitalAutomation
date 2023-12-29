@@ -79,16 +79,37 @@ namespace HospitalManagementSystemProject
 
         private void button5_Click(object sender, EventArgs e)
         {
-            NpgsqlCommand command2 = new NpgsqlCommand("insert into meeting (meetingdate, meetingtime, meetingbranch, meetingdoctor, meetingstate, meetingpatienttc) values (@p1, @p2, @p3, @p4, @p5, @p6)", connection.Connection());
-            command2.Parameters.AddWithValue("@p1", maskedTextBox2.Text);
-            command2.Parameters.AddWithValue("@p2", maskedTextBox3.Text);
-            command2.Parameters.AddWithValue("@p3", comboBox1.Text);
-            command2.Parameters.AddWithValue("@p4", comboBox2.Text);
-            command2.Parameters.AddWithValue("@p5", checkBox1.Checked);
-            command2.Parameters.AddWithValue("@p6", maskedTextBox1.Text);
-            command2.ExecuteNonQuery();
+            NpgsqlCommand command4 = new NpgsqlCommand("insert into meeting (meetingdate, meetingtime, meetingbranch, meetingdoctor, meetingstate, meetingpatienttc) values (@p1, @p2, @p3, @p4, @p5, @p6)", connection.Connection());
+            command4.Parameters.AddWithValue("@p1", maskedTextBox2.Text);
+            command4.Parameters.AddWithValue("@p2", maskedTextBox3.Text);
+            command4.Parameters.AddWithValue("@p3", comboBox1.Text);
+            command4.Parameters.AddWithValue("@p4", comboBox2.Text);
+            command4.Parameters.AddWithValue("@p5", checkBox1.Checked);
+            command4.Parameters.AddWithValue("@p6", maskedTextBox1.Text);
+            command4.ExecuteNonQuery();
             connection.Connection().Close();
             MessageBox.Show("Randevu oluşturuldu!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NpgsqlCommand command5 = new NpgsqlCommand("insert into announcement (announcementtext) values (@p1)", connection.Connection());
+            command5.Parameters.AddWithValue("@p1", richTextBox1.Text);
+            command5.ExecuteNonQuery();
+            connection.Connection().Close();
+            MessageBox.Show("Duyuru oluşturuldu!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SecretaryDoctorEdit secretaryDoctorEdit = new SecretaryDoctorEdit();
+            secretaryDoctorEdit.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SecretaryBranchEdit secretaryBranchEdit = new SecretaryBranchEdit();
+            secretaryBranchEdit.Show();
         }
     }
 }
