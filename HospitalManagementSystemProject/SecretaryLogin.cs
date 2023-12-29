@@ -1,13 +1,4 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -18,10 +9,11 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Database query for secretary login
             NpgsqlCommand command = new NpgsqlCommand("select * from secretary where secretarytc = @p1 and secretarypassword = @p2", connection.Connection());
             command.Parameters.AddWithValue("@p1", maskedTextBox1.Text);
             command.Parameters.AddWithValue("@p2", textBox1.Text);
@@ -29,7 +21,7 @@ namespace HospitalManagementSystemProject
             if (dataReader.Read())
             {
                 SecretaryScreen secretaryScreen = new SecretaryScreen();
-                secretaryScreen.secretaryTC = maskedTextBox1.Text;
+                secretaryScreen.secretaryScreenTCIdentityNumber = maskedTextBox1.Text; // Passing parameters to the secretary screen
                 secretaryScreen.Show();
                 this.Hide();
             }

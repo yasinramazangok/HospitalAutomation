@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Npgsql;
+﻿using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -19,16 +9,16 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        public string patienttc;
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
+        public string patientEditInformationTCIdentityNumber; // Patient edit information screen parameter
 
         private void PatientEditInformation_Load(object sender, EventArgs e)
         {
-            maskedTextBox1.Text = patienttc;
+            maskedTextBox1.Text = patientEditInformationTCIdentityNumber;
 
             NpgsqlCommand command = new NpgsqlCommand("select * from patient where patienttc = @p1", connection.Connection());
-            command.Parameters.AddWithValue("@p1", patienttc);
+            command.Parameters.AddWithValue("@p1", patientEditInformationTCIdentityNumber);
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
@@ -43,7 +33,7 @@ namespace HospitalManagementSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NpgsqlCommand command2 = new NpgsqlCommand("update patient set patientname = @p1, patientsurname = @p2, patienttc = @p3, patientphonenumber = @p4, patientgender = @p5, patientpassword = @p6 where patienttc = '" + patienttc + "'", connection.Connection());
+            NpgsqlCommand command2 = new NpgsqlCommand("update patient set patientname = @p1, patientsurname = @p2, patienttc = @p3, patientphonenumber = @p4, patientgender = @p5, patientpassword = @p6 where patienttc = '" + patientEditInformationTCIdentityNumber + "'", connection.Connection());
             command2.Parameters.AddWithValue("@p1", textBox1.Text);
             command2.Parameters.AddWithValue("@p2", textBox2.Text);
             command2.Parameters.AddWithValue("@p3", maskedTextBox1.Text);

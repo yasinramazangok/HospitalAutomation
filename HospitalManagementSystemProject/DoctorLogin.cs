@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Npgsql;
+﻿using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -30,7 +21,7 @@ namespace HospitalManagementSystemProject
             if (dataReader.Read())
             {
                 DoctorScreen doctorScreen = new DoctorScreen();
-                doctorScreen.doctorTCIdentityNumber = maskedTextBox1.Text; // Passing parameters to the doctor screen
+                doctorScreen.doctorScreenTCIdentityNumber = maskedTextBox1.Text; // Passing parameters to the doctor screen
                 doctorScreen.Show();
                 this.Hide();
             }

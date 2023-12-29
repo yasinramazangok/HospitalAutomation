@@ -1,14 +1,5 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using System.Data; // Necessary for DataTable class
+using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -19,10 +10,11 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();   
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database   
 
         private void SecretaryBranchEdit_Load(object sender, EventArgs e)
         {
+            // Pulling data from database to dataGridView1
             DataTable dataTable = new DataTable();
             NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select branchid as \"Id\", branchname as \"Branş Adı\" from branch order by branchid asc", connection.Connection());
             dataAdapter.Fill(dataTable);

@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Npgsql;
+﻿using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -18,7 +9,7 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
         private void button1_Click(object sender, EventArgs e)
         {

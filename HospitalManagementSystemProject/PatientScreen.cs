@@ -1,14 +1,5 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Common;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data; // Necessary for DataTable class
+using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -19,16 +10,17 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        public string TCIdentityNumber;
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
+        public string patientScreenTCIdentityNumber; // Patient screen parameter
 
         private void PatientScreen_Load(object sender, EventArgs e)
         {
-            label3.Text = TCIdentityNumber;
+            label3.Text = patientScreenTCIdentityNumber;
 
+            // Pulling data from database to form components
             NpgsqlCommand command = new NpgsqlCommand("select patientname, patientsurname from patient where patienttc = @p1", connection.Connection());
-            command.Parameters.AddWithValue("@p1", TCIdentityNumber);
+            command.Parameters.AddWithValue("@p1", patientScreenTCIdentityNumber);
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
@@ -36,13 +28,13 @@ namespace HospitalManagementSystemProject
             }
             connection.Connection().Close();
 
-
+            // Pulling data from database to dataGridView1
             DataTable dataTable = new DataTable();
-            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from meeting where meetingpatienttc::character varying = " + TCIdentityNumber, connection.Connection());
+            NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from meeting where meetingpatienttc::character varying = " + patientScreenTCIdentityNumber, connection.Connection());
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
 
-
+            // Pulling data from database to form components
             NpgsqlCommand command2 = new NpgsqlCommand("select branchname from branch", connection.Connection());
             NpgsqlDataReader dataReader2 = command2.ExecuteReader();
             while (dataReader2.Read())
@@ -56,6 +48,7 @@ namespace HospitalManagementSystemProject
         {
             comboBox2.Items.Clear();
 
+            // Pulling data from database to form components
             NpgsqlCommand command3 = new NpgsqlCommand("select doctorname, doctorsurname from doctor where doctorbranch = @p1 ", connection.Connection());
             command3.Parameters.AddWithValue("@p1", comboBox1.Text);
             NpgsqlDataReader dataReader3 = command3.ExecuteReader();
@@ -69,6 +62,7 @@ namespace HospitalManagementSystemProject
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Pulling data from database to form components
             DataTable dataTable2 = new DataTable();
             NpgsqlDataAdapter dataAdapter2 = new NpgsqlDataAdapter("select * from meeting where meetingbranch = '" + comboBox1.Text + "'", connection.Connection());
             dataAdapter2.Fill(dataTable2);
@@ -78,7 +72,7 @@ namespace HospitalManagementSystemProject
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PatientEditInformation patientEditInformation = new PatientEditInformation();
-            patientEditInformation.patienttc = TCIdentityNumber;
+            patientEditInformation.patientEditInformationTCIdentityNumber = patientScreenTCIdentityNumber;
             patientEditInformation.Show();
         }
     }

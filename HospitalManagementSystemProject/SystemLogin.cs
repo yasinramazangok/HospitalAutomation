@@ -9,6 +9,7 @@ namespace HospitalManagementSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Redirect to doctor login screen
             DoctorLogin doctorLogin = new DoctorLogin();
             doctorLogin.Show();
             this.Hide();
@@ -16,6 +17,7 @@ namespace HospitalManagementSystemProject
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Redirect to patient login screen
             PatientLogin patientLogin = new PatientLogin();
             patientLogin.Show();
             this.Hide();
@@ -23,6 +25,7 @@ namespace HospitalManagementSystemProject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // Redirect to secretary login screen
             SecretaryLogin secretaryLogin = new SecretaryLogin();
             secretaryLogin.Show();
             this.Hide();

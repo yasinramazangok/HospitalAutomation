@@ -1,14 +1,5 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using System.Data; // Necessary for DataTable class
+using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -19,15 +10,15 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        public string secretaryTC;
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
-
+        public string secretaryScreenTCIdentityNumber; // Secretary screen parameter
+       
         private void SecretaryScreen_Load(object sender, EventArgs e)
         {
-            label3.Text = secretaryTC;
+            label3.Text = secretaryScreenTCIdentityNumber;
 
-            NpgsqlCommand command = new NpgsqlCommand("select * from secretary where secretarytc = '" + secretaryTC + "'", connection.Connection());
+            NpgsqlCommand command = new NpgsqlCommand("select * from secretary where secretarytc = '" + secretaryScreenTCIdentityNumber + "'", connection.Connection());
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
@@ -35,7 +26,7 @@ namespace HospitalManagementSystemProject
             }
             connection.Connection().Close();
 
-
+            // Pulling data from database to dataGridView1
             DataTable dataTable = new DataTable();
             NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select * from branch order by branchid asc", connection.Connection());
             dataAdapter.Fill(dataTable);
@@ -44,6 +35,7 @@ namespace HospitalManagementSystemProject
             dataGridView1.Columns["branchname"].HeaderText = "Branş Adı";
             connection.Connection().Close();
 
+            // Pulling data from database to dataGridView2
             DataTable dataTable2 = new DataTable();
             NpgsqlDataAdapter dataAdapter2 = new NpgsqlDataAdapter("select (doctorname || ' ' || doctorsurname) as \"Adı Soyadı\", doctorbranch as \"Branşı\", doctortc, doctorpassword from doctor order by doctorid asc", connection.Connection());
             dataAdapter2.Fill(dataTable2);

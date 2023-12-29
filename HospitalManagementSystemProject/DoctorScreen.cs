@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Npgsql;
+﻿using System.Data; // Necessary for DataTable class
+using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -18,7 +10,9 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        public string? doctorTCIdentityNumber; // Doctor screen parameter
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
+
+        public string? doctorScreenTCIdentityNumber; // Doctor screen parameter
         /* 
             C# 8.0'dan önce, tüm referans tipler (örneğin, string, object, class türleri) otomatik olarak nullable idi. 
             Yani, herhangi bir referans tipin değeri null olabilir. 
@@ -27,16 +21,13 @@ namespace HospitalManagementSystemProject
             Bu yüzden burada değişken nullable olarak tanımlanmıştır.
         */
 
-        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
-
         private void DoctorScreen_Load(object sender, EventArgs e)
         {
+            label3.Text = doctorScreenTCIdentityNumber;
+
             // Pulling data from database to groupBox1
-
-            label3.Text = doctorTCIdentityNumber;
-
             NpgsqlCommand command = new NpgsqlCommand("select doctorname,doctorsurname from doctor where doctortc = @p1", connection.Connection());
-            command.Parameters.AddWithValue("@p1", doctorTCIdentityNumber);
+            command.Parameters.AddWithValue("@p1", doctorScreenTCIdentityNumber);
             NpgsqlDataReader dataReader = command.ExecuteReader();
             while (dataReader.Read())
             {
@@ -56,7 +47,7 @@ namespace HospitalManagementSystemProject
         {
             // Redirect to doctor edit information screen from button1
             DoctorEditInformation doctorEditInformation = new DoctorEditInformation();
-            doctorEditInformation.doctorTCIdentityNumber = doctorTCIdentityNumber; // Passing parameters to the doctor edit information screen
+            doctorEditInformation.doctorEditInformationTCIdentityNumber = doctorScreenTCIdentityNumber; // Passing parameters to the doctor edit information screen
             doctorEditInformation.Show();
         }
 

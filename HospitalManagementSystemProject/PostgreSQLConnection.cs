@@ -1,12 +1,6 @@
 ﻿// This class defined by developer.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Npgsql; // for PostgreSQL
-using System.Data;
-using System.Data.Common;
+using Npgsql; // PostgreSQL library for C#
+
 namespace HospitalManagementSystemProject
 {
     internal class PostgreSQLConnection

@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Npgsql;
+﻿using System.Data; // Necessary for DataTable class
+using Npgsql; // PostgreSQL library for C#
 
 namespace HospitalManagementSystemProject
 {
@@ -18,10 +10,11 @@ namespace HospitalManagementSystemProject
             InitializeComponent();
         }
 
-        PostgreSQLConnection connection = new PostgreSQLConnection();
+        PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
         private void MeetingList_Load(object sender, EventArgs e)
         {
+            // Pulling data from database to dataGridView1
             DataTable dataTable = new DataTable();
             NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter("select meetingdate as \"Randevu Tarihi\", meetingtime as \"Randevu Saati\", meetingbranch as \"Branş\", meetingdoctor as \"Doktor Adı\", meetingstate, meetingpatienttc from meeting order by meetingid asc", connection.Connection());
             dataAdapter.Fill(dataTable);

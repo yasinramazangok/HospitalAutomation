@@ -43,5 +43,8 @@
     <Compile Update="PatientLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SystemWelcomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

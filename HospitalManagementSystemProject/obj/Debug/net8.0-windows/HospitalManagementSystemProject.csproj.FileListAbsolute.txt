@@ -34,3 +34,4 @@ C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\o
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.pdb
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.genruntimeconfig.cache
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\ref\HospitalManagementSystemProject.dll
+C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.SystemWelcomeScreen.resources
