@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bjbe8ImdRIDrx3nc0NuN0BovnQQw4C1hc68kh86OA7aaDPpCbom1+h7NWzrtEPcUnP8Nhs9sx9O0w8MJLTPEgw==",
+  "dgSpecHash": "kslDXXU/fNlmAROoCetv09VN39GgNnhY9hTCpJomvyN4/QvRTpRaBnZyCmRYO8C8cY6ymTMfP12FQT/HBX+rgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yasin\\source\\repos\\HospitalAutomation\\HospitalManagementSystemProject\\HospitalManagementSystemProject.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\yasin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\yasin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\yasin\\.nuget\\packages\\npgsql\\8.0.1\\npgsql.8.0.1.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\enesb\\OneDrive\\Masaüstü\\HospitalAutomation\\HospitalManagementSystemProject\\HospitalManagementSystemProject.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
