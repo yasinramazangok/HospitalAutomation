@@ -12,6 +12,7 @@ namespace HospitalManagementSystemProject
 
         PostgreSQLConnection connection = new PostgreSQLConnection(); // Connecting to PostgreSQL database
 
+
         public string? doctorScreenTCIdentityNumber; // Doctor screen parameter
         /* 
             C# 8.0'dan önce, tüm referans tipler (örneğin, string, object, class türleri) otomatik olarak nullable idi. 

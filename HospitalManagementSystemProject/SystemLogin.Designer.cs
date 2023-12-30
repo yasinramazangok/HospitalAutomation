@@ -38,6 +38,7 @@
             pictureBox1 = new PictureBox();
             label4 = new Label();
             label5 = new Label();
+            colorDialog1 = new ColorDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -180,5 +181,6 @@
         private PictureBox pictureBox1;
         private Label label4;
         private Label label5;
+        private ColorDialog colorDialog1;
     }
 }
