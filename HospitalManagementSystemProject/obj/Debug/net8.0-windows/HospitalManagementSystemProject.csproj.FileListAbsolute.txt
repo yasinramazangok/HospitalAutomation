@@ -22,6 +22,7 @@ C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\o
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.SecretaryLogin.resources
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.SecretaryScreen.resources
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.SystemLogin.resources
+C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.SystemWelcomeScreen.resources
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.csproj.GenerateResource.cache
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.AssemblyInfoInputs.cache
@@ -34,4 +35,3 @@ C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\o
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.pdb
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.genruntimeconfig.cache
 C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\ref\HospitalManagementSystemProject.dll
-C:\Users\yasin\source\repos\HospitalAutomation\HospitalManagementSystemProject\obj\Debug\net8.0-windows\HospitalManagementSystemProject.SystemWelcomeScreen.resources
