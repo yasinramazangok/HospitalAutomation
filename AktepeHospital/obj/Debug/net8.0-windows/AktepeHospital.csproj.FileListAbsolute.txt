@@ -1,0 +1,17 @@
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\bin\Debug\net8.0-windows\AktepeHospital.exe
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\bin\Debug\net8.0-windows\AktepeHospital.deps.json
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\bin\Debug\net8.0-windows\AktepeHospital.runtimeconfig.json
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\bin\Debug\net8.0-windows\AktepeHospital.dll
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\bin\Debug\net8.0-windows\AktepeHospital.pdb
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.Form1.resources
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.csproj.GenerateResource.cache
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.AssemblyInfoInputs.cache
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.AssemblyInfo.cs
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.csproj.CoreCompileInputs.cache
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.sourcelink.json
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.dll
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\refint\AktepeHospital.dll
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.pdb
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\AktepeHospital.genruntimeconfig.cache
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\AktepeHospital\obj\Debug\net8.0-windows\ref\AktepeHospital.dll

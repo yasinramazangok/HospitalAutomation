@@ -4,5 +4,14 @@
     <Compile Update="HospitalScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Patient detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Patient registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PatientLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

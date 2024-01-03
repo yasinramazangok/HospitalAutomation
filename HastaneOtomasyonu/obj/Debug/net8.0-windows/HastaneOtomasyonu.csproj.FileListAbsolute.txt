@@ -16,3 +16,4 @@ C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\HastaneOtomasyonu\obj\Debu
 C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\HastaneOtomasyonu\obj\Debug\net8.0-windows\HastaneOtomasyonu.pdb
 C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\HastaneOtomasyonu\obj\Debug\net8.0-windows\HastaneOtomasyonu.genruntimeconfig.cache
 C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\HastaneOtomasyonu\obj\Debug\net8.0-windows\ref\HastaneOtomasyonu.dll
+C:\Users\enesb\OneDrive\Masaüstü\HospitalAutomation\HastaneOtomasyonu\obj\Debug\net8.0-windows\HastaneOtomasyonu.PatientLogin.resources
